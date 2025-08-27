@@ -1,0 +1,21 @@
+name: CD - Deploy con Git Pull
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Conectarse al servidor y hacer git pull
+        run: |
+          ssh -o StrictHostKeyChecking=no usuario@IP_DEL_SERVIDOR "
+            cd ~/lemp-sites/nombre_apellido &&
+            git pull origin main
+          "
+        env:
+          # GitHub buscará este secreto para autenticarse vía SSH
+          # El secreto debe contener la clave privada ya configurada
+          # El servidor debe tener la clave pública en ~/.ssh/authorized_keys
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
