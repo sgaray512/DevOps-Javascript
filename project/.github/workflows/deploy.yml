@@ -10,8 +10,8 @@ jobs:
     steps:
       - name: Conectarse al servidor y hacer git pull
         run: |
-          ssh -o StrictHostKeyChecking=no usuario@IP_DEL_SERVIDOR "
-            cd ~/lemp-sites/nombre_apellido &&
+          ssh -o StrictHostKeyChecking=no alumno@137.184.127.11 "
+            cd ~/lemp-sites/santiago_garay &&
             git pull origin main
           "
         env:
