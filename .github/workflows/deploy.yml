@@ -11,7 +11,7 @@ jobs:
       - name: Conectarse al servidor y hacer git pull
         run: |
           ssh -o StrictHostKeyChecking=no alumno@137.184.127.11 "
-            cd ~/lemp-sites/santiago_garay &&
+            cd ~/lemp-sites/santiago_garay/DevOps-Javascript &&
             git pull origin main
           "
         env:
