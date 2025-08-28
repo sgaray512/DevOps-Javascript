@@ -22,5 +22,7 @@ jobs:
       - name: Instalar dependencias (si las hay)
         run: npm install || true
 
-      - name: Ejecutar pruebas
-        run: node math.test.js
+      - name: Ejecutar tests
+        run: |
+          node script.test.js
+          node math.test.js
