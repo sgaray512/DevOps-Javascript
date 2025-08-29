@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: auto;
+  background: #757575;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #333;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.auto-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: blue;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
