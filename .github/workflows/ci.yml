@@ -9,6 +9,9 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: semaforo-react
 
     steps:
       - name: Checkout código
@@ -18,11 +21,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "18"
+          cache: "npm"
+          cache-dependency-path: semaforo-react/package-lock.json
 
       - name: Instalar dependencias (si las hay)
         run: npm install || true
 
       - name: Ejecutar tests
         run: |
-          node Semaforo.test.jsx
           node math.test.js
+      - name: test-react
+        run: npm test
